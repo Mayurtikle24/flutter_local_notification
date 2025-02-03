@@ -21,7 +21,28 @@ class Home extends StatelessWidget {
                       subtitle: "This is Subtitle",
                       payload: "payload");
                 },
-                child: const Text("Simple Notification"))
+                child: const Text("Simple Notification")),
+            const SizedBox(height: 10),
+            ElevatedButton(
+                onPressed: () {
+                  LocalNotificationServices.periodicNotificatio(
+                      title: "Periodic Notification",
+                      subtitle: "This is Subtitle",
+                      payload: "payload");
+                },
+                child: const Text("Periodic Notification")),
+            const SizedBox(height: 10),
+            ElevatedButton(
+                onPressed: () {
+                  LocalNotificationServices.cancleNotification(1);
+                },
+                child: const Text("cancle Periodic Notification")),
+            const SizedBox(height: 10),
+            ElevatedButton(
+                onPressed: () {
+                  LocalNotificationServices.cancleAllNotification(1);
+                },
+                child: const Text("cancle All Periodic Notification"))
           ],
         ),
       ),
